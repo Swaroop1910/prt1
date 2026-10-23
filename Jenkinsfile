@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-		bat 'dir'
+				bat 'dir'
                 bat 'docker build -t %DOCKER_IMAGE%:v1 .'
             }
         }
