@@ -16,7 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
 				bat 'dir'
-                bat 'docker build -t %DOCKER_IMAGE%:v1 .'
+                bat 'docker build -t %DOCKER_IMAGE%:latest .'
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                bat 'docker push %DOCKER_IMAGE%:v1'
+                bat 'docker push %DOCKER_IMAGE%:latest'
             }
         }
     }
