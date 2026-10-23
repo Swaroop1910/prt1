@@ -28,7 +28,7 @@ pipeline {
                 )]) {
                     bat '''
                     @echo off
-                    echo %DOCKER_PAT%|docker login -u Swaroop1910 --password-stdin
+                    echo %DOCKER_PAT%|docker login -u swaroop1910 --password-stdin
                    if errorlevel 1 exit /b 1
                     '''
                 }
